@@ -44,6 +44,10 @@ const scraperObject = {
       urls = urls.concat(newUrls);
     }
     console.log(urls.length);
+
+    for (let url in urls) {
+      await page.goto(url);
+    }
   },
 };
 
